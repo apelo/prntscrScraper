@@ -10,7 +10,7 @@ raw_input("Press ENTER if you have read and accept that you are fully responsibl
 temp = 0
 #while temp < 10:
 
-noneWorking = [0, 503, 4939, 4940, 4941, 12003, 5556, 5082]
+noneWorking = [0, 503, 4939, 4940, 4941, 12003, 5556]
 
 def scrapePictures():
 	while True:
@@ -35,11 +35,11 @@ def scrapePictures():
 
 			# print printsc
 				# original print file. Currently in maintance mode.
-			# print str(file) + " file" #Used to DEBUG and find the none working pictures
+			#print str(file) + " file"
 			if file in noneWorking:
 				print "[-] Invalid: " + picture + picture2
 				os.remove(name + ".jpg")
-			else:
+			else: 
 				print "[+] Valid: " + printsc
 			#temp += 1
 
@@ -59,11 +59,11 @@ def scrapePictures():
 			urllib.urlretrieve(""+ printsc, str(name) + ".jpg")
 			file = os.path.getsize(str(name)+ ".jpg")
 			#print printsc
-			# print str(file) + " file" #Used to DEBUG and find the none working pictures
+			#print str(file) + " file"
 			if file in noneWorking:
 				print "[-] Invalid: " + picture
 				os.remove(name + ".jpg")
-			else:
+			else: 
 				print "[+] Valid: " + printsc
 			#temp += 1
 
